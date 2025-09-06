@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="../styles.css"> <!-- Ensure correct path -->
+    <link rel="stylesheet" href="../styles.css">
     <style>
         body {
             background: url('p5_开枪.jpg') no-repeat center center fixed;
@@ -16,7 +16,7 @@
         }
 
         .content-box {
-            background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+            background: rgba(0, 0, 0, 0.7);
             display: inline-block;
             padding: 25px;
             border-radius: 15px;
@@ -37,6 +37,18 @@
             margin-bottom: 20px;
             color: white;
             text-shadow: 2px 2px 0px black;
+        }
+
+        a.social-link {
+            color: #00acee; /* Instagram 蓝色 */
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        a.social-link:hover {
+            color: #ff4081; /* 粉色高亮 */
+            text-decoration: underline;
         }
 
         .back {
@@ -63,13 +75,22 @@
 <body>
     <div class="content-box">
         <h1>Contact</h1>
+
         <p>You can reach me via email at:  
             <strong>darrenli03913@gmail.com</strong>
         </p>
+
         <p>If you want to play games together, here is my Steam code:  
             <strong>1108956620</strong>
         </p>
-        <a class="back" href="../index.html">Back to Main Page</a> <!-- Fixed link -->
+
+        <p>Follow me on Instagram:  
+            <a class="social-link" href="https://www.instagram.com/darrenli2333?igsh=d3JyYTR5NjRydzA%3D&utm_source=qr" target="_blank">
+                @darrenli233
+            </a>
+        </p>
+
+        <a class="back" href="../index.html">Back to Main Page</a>
     </div>
 </body>
 </html>

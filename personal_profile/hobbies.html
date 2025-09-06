@@ -73,7 +73,7 @@
         }
 
         .gallery img {
-            width: 400px;  /* 调大尺寸 */
+            width: 400px;  /* 大图展示 */
             height: auto;
             border-radius: 12px;
             border: 3px solid white;
@@ -97,6 +97,7 @@
             background: rgba(0,0,0,0.9);
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
 
         .lightbox img {
@@ -122,6 +123,30 @@
 
         .close:hover {
             color: red;
+        }
+
+        /* 左右切换按钮 */
+        .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+        }
+
+        .nav:hover {
+            color: red;
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
         }
 
         /* 小屏幕时自动上下布局 */
@@ -158,15 +183,23 @@
     <!-- Lightbox 大图预览 -->
     <div id="img1" class="lightbox">
         <a href="#" class="close">&times;</a>
+        <a href="#img3" class="nav prev">&#10094;</a>
         <img src="林克.jpg" alt="Cosplay Link">
+        <a href="#img2" class="nav next">&#10095;</a>
     </div>
+
     <div id="img2" class="lightbox">
         <a href="#" class="close">&times;</a>
+        <a href="#img1" class="nav prev">&#10094;</a>
         <img src="joker怪盗.jpg" alt="Cosplay Joker Phantom Thief">
+        <a href="#img3" class="nav next">&#10095;</a>
     </div>
+
     <div id="img3" class="lightbox">
         <a href="#" class="close">&times;</a>
+        <a href="#img2" class="nav prev">&#10094;</a>
         <img src="joker校园.jpg" alt="Cosplay Joker Student">
+        <a href="#img1" class="nav next">&#10095;</a>
     </div>
 </body>
 </html>

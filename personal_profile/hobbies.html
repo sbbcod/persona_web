@@ -73,16 +73,55 @@
         }
 
         .gallery img {
-            width: 350px;  /* 调大尺寸 */
+            width: 400px;  /* 调大尺寸 */
             height: auto;
             border-radius: 12px;
             border: 3px solid white;
             box-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+            cursor: pointer;
             transition: transform 0.3s ease-in-out;
         }
 
         .gallery img:hover {
             transform: scale(1.05);
+        }
+
+        /* Lightbox 样式 */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border: 5px solid white;
+            border-radius: 12px;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .close:hover {
+            color: red;
         }
 
         /* 小屏幕时自动上下布局 */
@@ -110,10 +149,24 @@
 
         <!-- 右边照片 -->
         <div class="gallery">
-            <img src="林克.jpg" alt="Cosplay Link">
-            <img src="joker怪盗.jpg" alt="Cosplay Joker Phantom Thief">
-            <img src="joker校园.jpg" alt="Cosplay Joker Student">
+            <a href="#img1"><img src="林克.jpg" alt="Cosplay Link"></a>
+            <a href="#img2"><img src="joker怪盗.jpg" alt="Cosplay Joker Phantom Thief"></a>
+            <a href="#img3"><img src="joker校园.jpg" alt="Cosplay Joker Student"></a>
         </div>
+    </div>
+
+    <!-- Lightbox 大图预览 -->
+    <div id="img1" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="林克.jpg" alt="Cosplay Link">
+    </div>
+    <div id="img2" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="joker怪盗.jpg" alt="Cosplay Joker Phantom Thief">
+    </div>
+    <div id="img3" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="joker校园.jpg" alt="Cosplay Joker Student">
     </div>
 </body>
 </html>

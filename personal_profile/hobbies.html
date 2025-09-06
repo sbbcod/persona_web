@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobbies</title> 
-    <link rel="stylesheet" href="../styles.css"> <!-- Fixed path to styles.css -->
+    <link rel="stylesheet" href="../styles.css">
     <style>
         body {
             background: url('p5_玩手机.jpg') no-repeat center center fixed;
@@ -16,13 +16,13 @@
         }
 
         .content-box {
-            background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+            background: rgba(0, 0, 0, 0.7);
             display: inline-block;
             padding: 25px;
             border-radius: 15px;
             border: 3px solid white;
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-            max-width: 600px;
+            max-width: 800px;
         }
 
         h1 {
@@ -58,18 +58,48 @@
             color: white;
             text-shadow: 2px 2px 0px white;
         }
+
+        /* 图片展示区 */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 250px;
+            height: auto;
+            border-radius: 12px;
+            border: 3px solid white;
+            box-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
     <div class="content-box">
         <h1>Hobbies</h1>
-        <p>As you can see, I love Persona 5 and other JRPGs.  
+        <p>
+           As you can see, I love Persona 5 and other JRPGs.  
            I also enjoy Souls-like games.  
-           Additionally, I am interested in game development, although I haven't created any games yet.
-        i also enjoy cosplay the characters that i like here is some pictures that i have 
+           Additionally, I am interested in game development, although I haven't created any games yet.  
+           I also enjoy cosplay the characters that I like — here are some of my photos:
         </p>
-        <a class="back" href="../index.html">Back to Main Page</a> <!-- Fixed link -->
+
+        <!-- Cosplay Gallery -->
+        <div class="gallery">
+            <img src="林克.jpg" alt="Cosplay 1">
+            <img src="joker怪盗.jpg" alt="Cosplay 2">
+            <img src="joker校园.jpg" alt="Cosplay 3">
+        </div>
+
+        <a class="back" href="../index.html">Back to Main Page</a>
     </div>
 </body>
 </html>
-

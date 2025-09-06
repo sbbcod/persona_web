@@ -18,30 +18,10 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            gap: 40px;
+            gap: 60px; /* 左右间距 */
         }
 
-        /* 左边照片区 */
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .gallery img {
-            width: 260px;   /* 控制图片宽度 */
-            height: auto;
-            border-radius: 12px;
-            border: 3px solid white;
-            box-shadow: 4px 4px 12px rgba(0,0,0,0.6);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        /* 右边文字介绍 */
+        /* 左边文字介绍框 */
         .content-box {
             background: rgba(0, 0, 0, 0.7);
             padding: 25px;
@@ -85,8 +65,28 @@
             text-shadow: 2px 2px 0px white;
         }
 
-        /* 让小屏幕自动上下布局 */
-        @media (max-width: 900px) {
+        /* 右边照片区 */
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .gallery img {
+            width: 280px;  /* 控制宽度 */
+            height: auto;
+            border-radius: 12px;
+            border: 3px solid white;
+            box-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* 小屏幕时自动上下布局 */
+        @media (max-width: 1000px) {
             .container {
                 flex-direction: column;
                 align-items: center;
@@ -96,14 +96,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- 左边图片 -->
-        <div class="gallery">
-            <img src="林克.jpg" alt="Cosplay Link">
-            <img src="joker怪盗.jpg" alt="Cosplay Joker Phantom Thief">
-            <img src="joker校园.jpg" alt="Cosplay Joker Student">
-        </div>
-
-        <!-- 右边文字 -->
+        <!-- 左边文字框 -->
         <div class="content-box">
             <h1>Hobbies</h1>
             <p>
@@ -113,6 +106,13 @@
                 I also enjoy cosplay the characters that I like — here are some of my photos.
             </p>
             <a class="back" href="../index.html">Back to Main Page</a>
+        </div>
+
+        <!-- 右边照片 -->
+        <div class="gallery">
+            <img src="林克.jpg" alt="Cosplay Link">
+            <img src="joker怪盗.jpg" alt="Cosplay Joker Phantom Thief">
+            <img src="joker校园.jpg" alt="Cosplay Joker Student">
         </div>
     </div>
 </body>
